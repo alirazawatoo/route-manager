@@ -1,0 +1,3 @@
+# Advisories listed here are skipped by bin/bundler-audit. Keep it empty
+# unless an advisory has been reviewed and shown not to apply.
+ignore: []

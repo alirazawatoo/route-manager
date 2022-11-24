@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe GoogleMapApi::CalculateDistanceService, type: :service do
+RSpec.describe GoogleMapApi::CalculateDistanceService, type: :service do
   let(:gogetter_location) do
     {
       id: 0,
@@ -45,7 +45,7 @@ describe GoogleMapApi::CalculateDistanceService, type: :service do
     Timecop.return
   end
 
-  context 'job routes are in sorted order', vcr: { record: :once } do
+  context 'job routes are in sorted order', :vcr do
     it 'calculates total distance' do
       expect(described_class.new(job_routes, gogetter_location).call).to eq 338_00
     end

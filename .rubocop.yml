@@ -1,0 +1,11 @@
+inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+
+# The codebase has always used single-quoted strings.
+Style/StringLiterals:
+  EnforcedStyle: single_quotes

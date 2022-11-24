@@ -41,7 +41,7 @@ RSpec.describe JobsController, type: :controller do
     Timecop.return
   end
 
-  describe 'GET #index', vcr: { record: :once } do
+  describe 'GET #index', :vcr do
     context 'when total distance is positive' do
       before(:each) { get :index }
 

@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 module GoogleMapApi
-  # Calculate Distance from Google Maps API
+  # Asks the Google Directions API for the driving distance of a route that
+  # starts at the gogetter and visits every job.
   class CalculateDistanceService
+    DIRECTIONS_URL = 'https://maps.googleapis.com/maps/api/directions/json'
+
     attr_reader :job_routes, :gogetter_location
-    attr_accessor :dir_uri
 
     def initialize(job_routes, gogetter_location)
-      @dir_uri = "https://maps.googleapis.com/maps/api/directions/json?mode=driving&departure_time=#{Time.current.to_i}&traffic_model=best_guess&key=#{google_api_key}"
       @job_routes = job_routes
       @gogetter_location = gogetter_location
     end
@@ -14,18 +17,25 @@ module GoogleMapApi
       *remaining_destinations, final_destination = job_routes
       return if final_destination.nil?
 
-      dir_uri.concat("&origin=#{gogetter_location[:lat]},#{gogetter_location[:long]}")
-      dir_uri.concat("&destination=#{final_destination[:lat]},#{final_destination[:long]}")
-      unless remaining_destinations.blank?
-        dir_uri.concat('&waypoints=optimize:true')
-        remaining_destinations.each do |temp_destination|
-          dir_uri.concat("|#{temp_destination[:lat]},#{temp_destination[:long]}")
-        end
+      query = {
+        mode: 'driving',
+        departure_time: Time.current.to_i,
+        traffic_model: 'best_guess',
+        key: google_api_key,
+        origin: lat_long(gogetter_location),
+        destination: lat_long(final_destination)
+      }
+      if remaining_destinations.any?
+        query[:waypoints] = [ 'optimize:true', *remaining_destinations.map { |stop| lat_long(stop) } ].join('|')
       end
-      total_distance
+      total_distance(query)
     end
 
     private
+
+    def lat_long(location)
+      "#{location[:lat]},#{location[:long]}"
+    end
 
     def google_api_key
       ENV.fetch('GOOGLE_API_KEY') do
@@ -34,11 +44,9 @@ module GoogleMapApi
       end
     end
 
-    def total_distance
-      route_response = HTTParty.get(URI.encode(dir_uri))
-      route_response.dig('routes', 0, 'legs').inject(0) do |distance, response|
-        distance + response.dig('distance', 'value')
-      end
+    def total_distance(query)
+      route_response = HTTParty.get(DIRECTIONS_URL, query: query)
+      route_response.dig('routes', 0, 'legs').sum { |leg| leg.dig('distance', 'value') }
     end
   end
 end
