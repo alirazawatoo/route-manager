@@ -10,11 +10,7 @@ class JobsController < ApplicationController
   def index
     job_routes = sort_route_locations(@gogetter_location, @job_locations)
     route = GoogleMapApi::CalculateDistanceService.new(job_routes, @gogetter_location).call
-    if route.total_distance.positive?
-      render json: { total_driving_distance: route.total_distance, job_routes: route.job_routes }, status: :ok
-    else
-      render json: { message: 'Something went wrong' }, status: :unprocessable_entity
-    end
+    render json: { total_driving_distance: route.total_distance, job_routes: route.job_routes }, status: :ok
   end
 
   private

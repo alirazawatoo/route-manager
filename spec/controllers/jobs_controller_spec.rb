@@ -4,7 +4,6 @@ require 'rails_helper'
 
 RSpec.describe JobsController, type: :controller do
   let(:last_route) { 'L1-02, 1 Mont Kiara Mall, Jalan Kiara, Mont Kiara, 50480 Kuala Lumpur, Malaysia' }
-  let(:expected_failure_result) { { 'message' => 'Something went wrong' } }
   let(:expected_result_json) do
     <<-JSON
       {
@@ -56,12 +55,30 @@ RSpec.describe JobsController, type: :controller do
       end
     end
 
-    context 'when total distance is zero' do
-      it 'expects output to be in JSON format and sorted array' do
+    context 'when every stop is at the starting point' do
+      it 'returns a zero driving distance instead of an error' do
         stub_directions(leg_metres: [ 0, 0, 0 ], waypoint_order: [ 0, 1 ])
         get :index
-        expect(response.status).to eq 422
-        expect(response.parsed_body).to eq expected_failure_result
+        expect(response.status).to eq 200
+        expect(response.parsed_body['total_driving_distance']).to eq 0
+      end
+    end
+
+    {
+      'ZERO_RESULTS' => [ 422, 'route_not_found' ],
+      'NOT_FOUND' => [ 422, 'route_not_found' ],
+      'OVER_QUERY_LIMIT' => [ 503, 'quota_exceeded' ],
+      'REQUEST_DENIED' => [ 502, 'request_denied' ],
+      'INVALID_REQUEST' => [ 502, 'request_denied' ],
+      'UNKNOWN_ERROR' => [ 502, 'directions_unavailable' ]
+    }.each do |google_status, (http_status, error_code)|
+      context "when Google answers #{google_status}" do
+        it "responds #{http_status} with error #{error_code}" do
+          stub_directions(status: google_status)
+          get :index
+          expect(response.status).to eq http_status
+          expect(response.parsed_body).to include('error' => error_code, 'message' => a_kind_of(String))
+        end
       end
     end
   end

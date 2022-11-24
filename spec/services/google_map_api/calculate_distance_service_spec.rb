@@ -69,4 +69,46 @@ RSpec.describe GoogleMapApi::CalculateDistanceService, type: :service do
       expect(described_class.new(job_routes, gogetter_location).call.job_routes).to eq job_routes
     end
   end
+
+  describe 'Google error responses' do
+    subject(:call) { described_class.new(job_routes, gogetter_location).call }
+
+    {
+      'ZERO_RESULTS' => described_class::RouteNotFound,
+      'NOT_FOUND' => described_class::RouteNotFound,
+      'OVER_QUERY_LIMIT' => described_class::QuotaExceeded,
+      'OVER_DAILY_LIMIT' => described_class::QuotaExceeded,
+      'REQUEST_DENIED' => described_class::RequestDenied,
+      'INVALID_REQUEST' => described_class::RequestDenied,
+      'UNKNOWN_ERROR' => described_class::Unavailable
+    }.each do |status, error_class|
+      it "raises #{error_class.name.demodulize} for #{status}" do
+        stub_directions(status: status)
+        expect { call }.to raise_error(error_class, /#{status}/)
+      end
+    end
+
+    it 'treats OK without any route as no route found' do
+      stub_directions(status: 'OK')
+      expect { call }.to raise_error(described_class::RouteNotFound)
+    end
+
+    it 'raises Unavailable on an HTTP error from Google' do
+      stub_request(:get, DirectionsStub::DIRECTIONS_URL).to_return(status: 500, body: 'Internal error')
+      expect { call }.to raise_error(described_class::Unavailable, /HTTP 500/)
+    end
+
+    it 'raises Unavailable when the body is not JSON' do
+      stub_request(:get, DirectionsStub::DIRECTIONS_URL)
+        .to_return(status: 200, body: '{"routes": [', headers: { 'Content-Type' => 'application/json' })
+      expect { call }.to raise_error(described_class::Unavailable, /malformed JSON/)
+    end
+
+    it 'never sends a request without an API key' do
+      allow(ENV).to receive(:fetch).and_call_original
+      allow(ENV).to receive(:fetch).with('GOOGLE_API_KEY').and_raise(KeyError)
+      expect { call }.to raise_error(KeyError)
+      expect(a_request(:get, DirectionsStub::DIRECTIONS_URL)).not_to have_been_made
+    end
+  end
 end
