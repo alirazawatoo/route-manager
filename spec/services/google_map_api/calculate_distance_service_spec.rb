@@ -111,4 +111,43 @@ RSpec.describe GoogleMapApi::CalculateDistanceService, type: :service do
       expect(a_request(:get, DirectionsStub::DIRECTIONS_URL)).not_to have_been_made
     end
   end
+
+  describe 'slow or unreachable Google' do
+    subject(:call) { described_class.new(job_routes, gogetter_location).call }
+
+    it 'raises TimedOut when the connection times out' do
+      stub_request(:get, DirectionsStub::DIRECTIONS_URL).to_timeout
+      expect { call }.to raise_error(described_class::TimedOut, /within 5.0s/)
+    end
+
+    it 'raises TimedOut when the response is not read in time' do
+      stub_request(:get, DirectionsStub::DIRECTIONS_URL).to_raise(Net::ReadTimeout)
+      expect { call }.to raise_error(described_class::TimedOut)
+    end
+
+    it 'raises Unavailable when Google cannot be reached' do
+      stub_request(:get, DirectionsStub::DIRECTIONS_URL).to_raise(SocketError)
+      expect { call }.to raise_error(described_class::Unavailable, /SocketError/)
+    end
+
+    it 'bounds every request with a timeout' do
+      stub_directions(leg_metres: [ 1, 2, 3 ], waypoint_order: [ 0, 1 ])
+      allow(HTTParty).to receive(:get).and_call_original
+
+      call
+
+      expect(HTTParty).to have_received(:get).with(described_class::DIRECTIONS_URL, hash_including(timeout: 5.0))
+    end
+
+    it 'reads the timeout from GOOGLE_MAPS_TIMEOUT_SECONDS' do
+      stub_directions(leg_metres: [ 1, 2, 3 ], waypoint_order: [ 0, 1 ])
+      allow(ENV).to receive(:fetch).and_call_original
+      allow(ENV).to receive(:fetch).with('GOOGLE_MAPS_TIMEOUT_SECONDS', anything).and_return('1.5')
+      allow(HTTParty).to receive(:get).and_call_original
+
+      call
+
+      expect(HTTParty).to have_received(:get).with(anything, hash_including(timeout: 1.5))
+    end
+  end
 end

@@ -6,6 +6,8 @@ class ApplicationController < ActionController::API
       [ :service_unavailable, 'quota_exceeded', 'The Google Maps quota is used up. Try again later.' ],
     GoogleMapApi::CalculateDistanceService::RequestDenied =>
       [ :bad_gateway, 'request_denied', 'Google rejected the directions request. Check the API key and its Directions API access.' ],
+    GoogleMapApi::CalculateDistanceService::TimedOut =>
+      [ :gateway_timeout, 'directions_timeout', 'The Google Directions API did not answer in time. Try again.' ],
     GoogleMapApi::CalculateDistanceService::Unavailable =>
       [ :bad_gateway, 'directions_unavailable', 'The Google Directions API did not give a usable answer.' ]
   }.freeze

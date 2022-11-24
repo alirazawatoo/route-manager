@@ -64,6 +64,15 @@ RSpec.describe JobsController, type: :controller do
       end
     end
 
+    context 'when Google does not answer in time' do
+      it 'responds 504 with error directions_timeout' do
+        stub_request(:get, DirectionsStub::DIRECTIONS_URL).to_timeout
+        get :index
+        expect(response.status).to eq 504
+        expect(response.parsed_body['error']).to eq 'directions_timeout'
+      end
+    end
+
     {
       'ZERO_RESULTS' => [ 422, 'route_not_found' ],
       'NOT_FOUND' => [ 422, 'route_not_found' ],

@@ -5,6 +5,11 @@ module GoogleMapApi
   # starts at the gogetter, visits every job and ends at the last one.
   class CalculateDistanceService
     DIRECTIONS_URL = 'https://maps.googleapis.com/maps/api/directions/json'
+    DEFAULT_TIMEOUT_SECONDS = 5
+    NETWORK_ERRORS = [
+      SocketError, EOFError, OpenSSL::SSL::SSLError,
+      Errno::ECONNREFUSED, Errno::ECONNRESET, Errno::EHOSTUNREACH, Errno::ENETUNREACH
+    ].freeze
 
     # total_distance is in metres; job_routes is in the order Google drove.
     Route = Data.define(:total_distance, :job_routes)
@@ -18,6 +23,9 @@ module GoogleMapApi
     class RequestDenied < Error; end
     # Google failed or answered with something that is not a Directions reply.
     class Unavailable < Error; end
+    # No answer within the timeout; without one a stalled request would hold
+    # a Puma thread for Net::HTTP's 60-second default.
+    class TimedOut < Unavailable; end
 
     STATUS_ERRORS = {
       'ZERO_RESULTS' => RouteNotFound,
@@ -61,7 +69,7 @@ module GoogleMapApi
     private
 
     def fetch_route(query)
-      response = HTTParty.get(DIRECTIONS_URL, query: query)
+      response = request_directions(query)
       raise Unavailable, "Directions API answered HTTP #{response.code}" unless response.success?
 
       body = parse(response)
@@ -72,6 +80,18 @@ module GoogleMapApi
       raise RouteNotFound, 'Directions API returned OK without a route' unless route.is_a?(Hash) && route['legs'].is_a?(Array)
 
       route
+    end
+
+    def request_directions(query)
+      HTTParty.get(DIRECTIONS_URL, query: query, timeout: timeout_seconds)
+    rescue Net::OpenTimeout, Net::ReadTimeout, Net::WriteTimeout
+      raise TimedOut, "Directions API did not answer within #{timeout_seconds}s"
+    rescue *NETWORK_ERRORS => e
+      raise Unavailable, "Could not reach the Directions API (#{e.class})"
+    end
+
+    def timeout_seconds
+      Float(ENV.fetch('GOOGLE_MAPS_TIMEOUT_SECONDS', DEFAULT_TIMEOUT_SECONDS))
     end
 
     def parse(response)
