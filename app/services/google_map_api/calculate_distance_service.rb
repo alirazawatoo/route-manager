@@ -4,7 +4,7 @@ module GoogleMapApi
   # Asks the Google Directions API for the driving distance of a route that
   # starts at the gogetter, visits every job and ends at the last one.
   class CalculateDistanceService
-    DIRECTIONS_URL = 'https://maps.googleapis.com/maps/api/directions/json'
+    DEFAULT_DIRECTIONS_URL = 'https://maps.googleapis.com/maps/api/directions/json'
     DEFAULT_TIMEOUT_SECONDS = 5
     NETWORK_ERRORS = [
       SocketError, EOFError, OpenSSL::SSL::SSLError,
@@ -83,11 +83,16 @@ module GoogleMapApi
     end
 
     def request_directions(query)
-      HTTParty.get(DIRECTIONS_URL, query: query, timeout: timeout_seconds)
+      HTTParty.get(directions_url, query: query, timeout: timeout_seconds)
     rescue Net::OpenTimeout, Net::ReadTimeout, Net::WriteTimeout
       raise TimedOut, "Directions API did not answer within #{timeout_seconds}s"
     rescue *NETWORK_ERRORS => e
       raise Unavailable, "Could not reach the Directions API (#{e.class})"
+    end
+
+    # Overridable so a local stub or proxy can stand in for Google.
+    def directions_url
+      ENV.fetch('GOOGLE_DIRECTIONS_URL', DEFAULT_DIRECTIONS_URL)
     end
 
     def timeout_seconds

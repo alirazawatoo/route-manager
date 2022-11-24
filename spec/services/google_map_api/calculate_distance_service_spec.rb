@@ -136,7 +136,18 @@ RSpec.describe GoogleMapApi::CalculateDistanceService, type: :service do
 
       call
 
-      expect(HTTParty).to have_received(:get).with(described_class::DIRECTIONS_URL, hash_including(timeout: 5.0))
+      expect(HTTParty).to have_received(:get).with(described_class::DEFAULT_DIRECTIONS_URL, hash_including(timeout: 5.0))
+    end
+
+    it 'sends requests to GOOGLE_DIRECTIONS_URL when it is set' do
+      stub_request(:get, %r{\Ahttp://directions-stub:9000/directions}).to_return(
+        headers: { 'Content-Type' => 'application/json' },
+        body: { status: 'OK', routes: [ { waypoint_order: [ 0, 1 ], legs: [ { distance: { value: 10 } } ] * 3 } ] }.to_json
+      )
+      allow(ENV).to receive(:fetch).and_call_original
+      allow(ENV).to receive(:fetch).with('GOOGLE_DIRECTIONS_URL', anything).and_return('http://directions-stub:9000/directions')
+
+      expect(call.total_distance).to eq 30
     end
 
     it 'reads the timeout from GOOGLE_MAPS_TIMEOUT_SECONDS' do
