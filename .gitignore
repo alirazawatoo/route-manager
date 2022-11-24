@@ -1,0 +1,35 @@
+# Bundler
+/.bundle
+/vendor/bundle
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+/config/master.key
+/config/credentials/*.key
+
+# Databases
+*.sqlite3
+*.sqlite3-*
+*.db
+
+# Logs, temp files, PIDs
+/log/*
+!/log/.keep
+/tmp/*
+!/tmp/.keep
+*.log
+
+# Build output, caches, coverage
+/public/assets
+/coverage
+/spec/examples.txt
+/.byebug_history
+/node_modules
+/project_venv
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
