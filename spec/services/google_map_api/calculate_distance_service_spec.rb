@@ -36,7 +36,9 @@ describe GoogleMapApi::CalculateDistanceService, type: :service do
   end
 
   before do
-    Timecop.freeze(Time.new(2022,06,19))
+    # departure_time is part of the recorded request URI, so freeze at the
+    # exact instant the cassettes were recorded, independent of the host TZ.
+    Timecop.freeze(Time.at(1_655_578_800))
   end
 
   after do
