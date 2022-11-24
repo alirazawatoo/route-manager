@@ -6,6 +6,7 @@ require_relative '../config/environment'
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 require 'support/vcr'
+require 'support/directions_stub'
 
 RSpec.configure do |config|
   config.infer_spec_type_from_file_location!

@@ -41,19 +41,32 @@ RSpec.describe GoogleMapApi::CalculateDistanceService, type: :service do
     Timecop.freeze(Time.at(1_655_578_800))
   end
 
-  after do
-    Timecop.return
-  end
-
   context 'job routes are in sorted order', :vcr do
     it 'calculates total distance' do
-      expect(described_class.new(job_routes, gogetter_location).call).to eq 338_00
+      expect(described_class.new(job_routes, gogetter_location).call.total_distance).to eq 338_00
     end
   end
 
   context 'job routes are empty' do
     it 'fails to calculate total distance' do
       expect(described_class.new([], gogetter_location).call).to be_nil
+    end
+  end
+
+  context 'when Google reorders the waypoints' do
+    it 'returns the stops in the order Google drove, destination last' do
+      stub_directions(leg_metres: [ 8_000, 3_000, 22_000 ], waypoint_order: [ 1, 0 ])
+
+      route = described_class.new(job_routes, gogetter_location).call
+
+      expect(route.job_routes).to eq [ job_routes[1], job_routes[0], job_routes[2] ]
+      expect(route.total_distance).to eq 33_000
+    end
+
+    it 'keeps the requested order when waypoint_order is missing or malformed' do
+      stub_directions(leg_metres: [ 1, 2, 3 ], waypoint_order: [ 0 ])
+
+      expect(described_class.new(job_routes, gogetter_location).call.job_routes).to eq job_routes
     end
   end
 end

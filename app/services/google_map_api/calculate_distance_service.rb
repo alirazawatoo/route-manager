@@ -2,9 +2,12 @@
 
 module GoogleMapApi
   # Asks the Google Directions API for the driving distance of a route that
-  # starts at the gogetter and visits every job.
+  # starts at the gogetter, visits every job and ends at the last one.
   class CalculateDistanceService
     DIRECTIONS_URL = 'https://maps.googleapis.com/maps/api/directions/json'
+
+    # total_distance is in metres; job_routes is in the order Google drove.
+    Route = Data.define(:total_distance, :job_routes)
 
     attr_reader :job_routes, :gogetter_location
 
@@ -14,8 +17,8 @@ module GoogleMapApi
     end
 
     def call
-      *remaining_destinations, final_destination = job_routes
-      return if final_destination.nil?
+      *waypoints, destination = job_routes
+      return if destination.nil?
 
       query = {
         mode: 'driving',
@@ -23,12 +26,15 @@ module GoogleMapApi
         traffic_model: 'best_guess',
         key: google_api_key,
         origin: lat_long(gogetter_location),
-        destination: lat_long(final_destination)
+        destination: lat_long(destination)
       }
-      if remaining_destinations.any?
-        query[:waypoints] = [ 'optimize:true', *remaining_destinations.map { |stop| lat_long(stop) } ].join('|')
-      end
-      total_distance(query)
+      query[:waypoints] = [ 'optimize:true', *waypoints.map { |stop| lat_long(stop) } ].join('|') if waypoints.any?
+
+      route = HTTParty.get(DIRECTIONS_URL, query: query).dig('routes', 0)
+      Route.new(
+        total_distance: route['legs'].sum { |leg| leg.dig('distance', 'value') },
+        job_routes: [ *in_driven_order(waypoints, route['waypoint_order']), destination ]
+      )
     end
 
     private
@@ -37,16 +43,19 @@ module GoogleMapApi
       "#{location[:lat]},#{location[:long]}"
     end
 
+    # optimize:true lets Google reorder the waypoints. The distance it returns
+    # is for its order, so the stops have to be reported in that order too.
+    def in_driven_order(waypoints, waypoint_order)
+      return waypoints unless waypoint_order.is_a?(Array) && waypoint_order.sort == waypoints.each_index.to_a
+
+      waypoint_order.map { |index| waypoints[index] }
+    end
+
     def google_api_key
       ENV.fetch('GOOGLE_API_KEY') do
         raise KeyError, 'GOOGLE_API_KEY is not set. Copy .env.example to .env and add a key ' \
                         'with the Directions API enabled.'
       end
-    end
-
-    def total_distance(query)
-      route_response = HTTParty.get(DIRECTIONS_URL, query: query)
-      route_response.dig('routes', 0, 'legs').sum { |leg| leg.dig('distance', 'value') }
     end
   end
 end
