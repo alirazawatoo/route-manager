@@ -1,16 +1,13 @@
 # frozen_string_literal: true
 
-# Controller to calculate distance of jobs of gogetter
+# Plans the route for a fixed sample of Kuala Lumpur jobs. POST /routes
+# does the same for locations sent by the client.
 class JobsController < ApplicationController
-  include LocationSortable
-
   before_action :set_gogetter_location, only: :index
   before_action :set_job_locations, only: :index
 
   def index
-    job_routes = sort_route_locations(@gogetter_location, @job_locations)
-    route = GoogleMapApi::CalculateDistanceService.new(job_routes, @gogetter_location).call
-    render json: { total_driving_distance: route.total_distance, job_routes: route.job_routes }, status: :ok
+    render_route(@gogetter_location, @job_locations)
   end
 
   private

@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+  include LocationSortable
+
   DIRECTIONS_ERRORS = {
     GoogleMapApi::CalculateDistanceService::RouteNotFound =>
       [ :unprocessable_content, 'route_not_found', 'Google found no driving route between these locations.' ],
@@ -13,8 +15,17 @@ class ApplicationController < ActionController::API
   }.freeze
 
   rescue_from GoogleMapApi::CalculateDistanceService::Error, with: :render_directions_error
+  rescue_from ActionDispatch::Http::Parameters::ParseError do
+    render json: { error: 'invalid_json', message: 'The request body is not valid JSON.' }, status: :bad_request
+  end
 
   private
+
+  def render_route(origin, jobs)
+    job_routes = sort_route_locations(origin, jobs)
+    route = GoogleMapApi::CalculateDistanceService.new(job_routes, origin).call
+    render json: { total_driving_distance: route.total_distance, job_routes: route.job_routes }
+  end
 
   def render_directions_error(error)
     status, code, message = DIRECTIONS_ERRORS.fetch(error.class)
