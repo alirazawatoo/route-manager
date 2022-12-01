@@ -20,6 +20,12 @@ group :development, :test do
   gem 'awesome_print'
 end
 
+group :test do
+  gem 'vcr', '~> 3.0', '>= 3.0.1'
+  gem 'webmock'
+  gem 'timecop'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
