@@ -27,7 +27,7 @@ module GoogleMapApi
 
     private
 
-    GOOGLE_API_KEY = 'AIzaSyBdcqjL5LQaeAG_4nGbuaL3aYcUnTq_pJY'.freeze
+    GOOGLE_API_KEY = 'GOOGLE_API_KEY'.freeze
     private_constant :GOOGLE_API_KEY
 
     def total_distance
