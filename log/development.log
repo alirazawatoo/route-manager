@@ -1,0 +1,1825 @@
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 18:34:03 +0800
+Processing by JobsController#create as */*
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 2ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.11.3) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.11.3) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.11.3) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (216.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (178.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (577.3ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 18:35:41 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 18476ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/jobs_controller.rb:6:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (156.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (153.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (326.2ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 23:28:24 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 37217ms
+
+NameError (uninitialized constant JobsController::HTTParty):
+  app/controllers/jobs_controller.rb:31:in `block in create'
+  app/controllers/jobs_controller.rb:9:in `each'
+  app/controllers/jobs_controller.rb:9:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (184.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (173.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (359.8ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 23:31:23 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 56997ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  actionview (4.2.11.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (166.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (208.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (443.2ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 23:35:57 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 513316ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  actionview (4.2.11.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (98.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (86.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (204.4ms)
+
+
+Started POST "/api/public/v1/jobs" for ::1 at 2022-03-21 23:44:49 +0800
+
+ActionController::RoutingError (No route matches [POST] "/api/public/v1/jobs"):
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (44.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1091.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (172.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (515.3ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 23:45:10 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 149397ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  actionview (4.2.11.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (220.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (167.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (375.5ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 23:48:41 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 6208ms
+
+NameError (undefined local variable or method `destination' for #<JobsController:0x00007fbcb1506fc0>
+Did you mean?  @destinations):
+  app/controllers/jobs_controller.rb:11:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (153.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (153.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (352.0ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 23:50:08 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 18962ms
+
+NameError (undefined local variable or method `temp_response' for #<JobsController:0x00007fbcb139ee58>):
+  app/controllers/jobs_controller.rb:31:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (160.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (144.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (336.1ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-21 23:50:48 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 249953ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  actionview (4.2.11.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (98.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (90.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (220.3ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 00:04:32 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 39464ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  actionview (4.2.11.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (333.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (446.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (7.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1021.0ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 00:07:45 +0800
+Processing by JobsController#create as */*
+Completed 200 OK in 14897ms (Views: 0.3ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 00:14:12 +0800
+Processing by JobsController#create as */*
+Completed 200 OK in 16382ms (Views: 0.7ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 00:15:28 +0800
+Processing by JobsController#create as */*
+Completed 200 OK in 14277ms (Views: 0.3ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 00:15:53 +0800
+Processing by JobsController#create as */*
+Completed 200 OK in 17923ms (Views: 0.2ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:28:40 +0800
+
+SyntaxError (/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/controllers/jobs_controller.rb:62: syntax error, unexpected tIDENTIFIER, expecting '}'
+          stop_number: 2
+                     ^
+/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/controllers/jobs_controller.rb:67: syntax error, unexpected tIDENTIFIER, expecting '}'
+          stop_number: 3
+                     ^):
+  app/controllers/jobs_controller.rb:62: syntax error, unexpected tIDENTIFIER, expecting '}'
+  app/controllers/jobs_controller.rb:67: syntax error, unexpected tIDENTIFIER, expecting '}'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (734.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (683.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1069.4ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:29:55 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 3484ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/jobs_controller.rb:35:in `block in create'
+  app/controllers/jobs_controller.rb:15:in `each'
+  app/controllers/jobs_controller.rb:15:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (167.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (212.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (511.8ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:30:55 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 24742ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/jobs_controller.rb:35:in `block in create'
+  app/controllers/jobs_controller.rb:15:in `each'
+  app/controllers/jobs_controller.rb:15:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (181.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (185.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (527.0ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:31:40 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 555600ms
+
+NameError (undefined local variable or method `routed_ids' for #<JobsController:0x00007facdf026230>):
+  app/controllers/jobs_controller.rb:48:in `block in create'
+  app/controllers/jobs_controller.rb:47:in `each'
+  app/controllers/jobs_controller.rb:47:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (177.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (438.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1098.4ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:47:22 +0800
+Processing by JobsController#create as */*
+Completed 200 OK in 84211ms (Views: 0.4ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:48:51 +0800
+Processing by JobsController#create as */*
+Completed 200 OK in 329465ms (Views: 0.3ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:55:24 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 3834ms
+
+NameError (undefined local variable or method `destination' for #<JobsController:0x00007facdf427dc0>
+Did you mean?  @destinations):
+  app/controllers/jobs_controller.rb:18:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (144.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (158.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (339.5ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:56:36 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 1566ms
+
+NameError (undefined local variable or method `destination' for #<JobsController:0x00007facdb6b8408>
+Did you mean?  @destinations):
+  app/controllers/jobs_controller.rb:18:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (160.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (144.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (353.7ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:56:54 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 18458ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/jobs_controller.rb:55:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (170.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (170.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (389.9ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 08:57:35 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 937028ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/jobs_controller.rb:55:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (18.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (169.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (169.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (364.4ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 09:13:54 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 60334ms
+
+SystemExit (exit):
+  app/controllers/jobs_controller.rb:35:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (114.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (31.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (42.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (373.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (250.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (3.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (527.5ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 09:23:23 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 14405ms
+
+NoMethodError (undefined method `last' for nil:NilClass):
+  app/controllers/jobs_controller.rb:18:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (180.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (180.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (408.9ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 10:03:44 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 45928ms
+
+NoMethodError (undefined method `last' for nil:NilClass):
+  app/controllers/jobs_controller.rb:24:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (28.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1504.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (834.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2379.2ms)
+
+
+Started PATCH "/private/v2/users/update_user_info" for ::1 at 2022-03-22 11:14:31 +0800
+
+ActionController::RoutingError (No route matches [PATCH] "/private/v2/users/update_user_info"):
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (29.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (190.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1056.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (542.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1306.2ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 11:14:59 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 18091ms
+
+NameError (undefined local variable or method `temp_destinations' for #<JobsController:0x00007fe6b52fc918>
+Did you mean?  temp_distance):
+  app/controllers/jobs_controller.rb:48:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (489.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1210.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (4.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (6.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2018.5ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 11:15:45 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 3490ms
+
+NameError (undefined local variable or method `remaining_destinations' for #<JobsController:0x00007fe6b2a6e550>):
+  app/controllers/jobs_controller.rb:48:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (611.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (761.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2161.5ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 11:17:45 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 1662ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/jobs_controller.rb:51:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (38.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1072.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (15.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (591.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1321.6ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 11:18:37 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 5009ms
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/controllers/jobs_controller.rb:58:in `[]'
+  app/controllers/jobs_controller.rb:58:in `block in create'
+  app/controllers/jobs_controller.rb:57:in `each'
+  app/controllers/jobs_controller.rb:57:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (565.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (6.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (470.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1170.1ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 11:19:12 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 3506ms
+
+NoMethodError (undefined method `pry' for #<Binding:0x00007fe6b24e11a0>
+Did you mean?  try):
+  app/controllers/jobs_controller.rb:58:in `block in create'
+  app/controllers/jobs_controller.rb:57:in `each'
+  app/controllers/jobs_controller.rb:57:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1537.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (64.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (828.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (4.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (17.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1963.2ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 11:19:26 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 1249074ms
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/controllers/jobs_controller.rb:59:in `[]'
+  app/controllers/jobs_controller.rb:59:in `block in create'
+  app/controllers/jobs_controller.rb:57:in `each'
+  app/controllers/jobs_controller.rb:57:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (308.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (85.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1291.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (64.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (925.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1922.5ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 11:40:27 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 540641ms
+
+NameError (undefined local variable or method `temp_destinations' for #<JobsController:0x00007fe6b2610a58>
+Did you mean?  temp_distance):
+  app/controllers/jobs_controller.rb:73:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (33.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (619.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (541.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (14.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1186.9ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 11:51:46 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 11215846ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/jobs_controller.rb:82:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (274.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (209.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (445.9ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 14:58:47 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 9300ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  actionview (4.2.11.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (622.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (340.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (844.1ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 16:20:51 +0800
+Processing by JobsController#create as */*
+Completed 500 Internal Server Error in 7631ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  actionview (4.2.11.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (166.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (575.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (3.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (249.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (967.9ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 16:26:46 +0800
+Processing by JobsController#create as */*
+  Parameters: {"-X"=>nil}
+Completed 500 Internal Server Error in 5184ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  actionview (4.2.11.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.11.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.11.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.11.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.11.3) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.11.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.11.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.11.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.11.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.11.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.11.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.11.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.11.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.11.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.11.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.11.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.11.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.11.3) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (124.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (106.7ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (235.4ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 16:27:44 +0800
+Processing by JobsController#create as */*
+  Parameters: {"-X"=>nil}
+Completed 500 Internal Server Error in 185ms
+
+ActionView::MissingTemplate (Missing template jobs/create, application/create with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :png, :jpeg, :gif, :bmp, :tiff, :mpeg, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :web_console_v2], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tech/Documents/Workspaces/GoGet/goget_senior_engineer_test/app/views"
+):
+  app/controllers/jobs_controller.rb:59:in `create'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (108.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (96.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (216.3ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 16:28:22 +0800
+Processing by JobsController#create as */*
+  Parameters: {"-X"=>nil}
+Completed 200 OK in 150ms (Views: 2.6ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 16:28:54 +0800
+Processing by JobsController#create as */*
+  Parameters: {"POST"=>nil}
+Completed 200 OK in 144ms (Views: 0.2ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 16:30:07 +0800
+Error occurred while parsing request parameters.
+Contents:
+
+{json}
+
+ActionDispatch::ParamsParser::ParseError (822: unexpected token at '{json}'):
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:31:in `parse_formatted_parameters'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.11.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (3.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (136.8ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (279.8ms)
+
+
+Started GET "/jobs" for ::1 at 2022-03-22 16:30:44 +0800
+
+ActionController::RoutingError (No route matches [GET] "/jobs"):
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.11.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.11.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.11.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.11.3) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.11.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.11.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/tech/.rbenv/versions/2.4.10/lib/ruby/2.4.0/webrick/server.rb:308:in `block in start_thread'
+
+
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/actionpack-4.2.11.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (157.0ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.9ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (93.1ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/tech/.rbenv/versions/2.4.10/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (208.3ms)
+
+
+Started POST "/jobs" for ::1 at 2022-03-22 16:33:54 +0800
+Processing by JobsController#create as */*
+  Parameters: {"-X"=>nil}
+Completed 200 OK in 154ms (Views: 0.7ms)
+
+
+Started GET "/jobs" for ::1 at 2022-03-22 16:34:56 +0800
+Processing by JobsController#index as */*
+Completed 200 OK in 254ms (Views: 0.3ms)
